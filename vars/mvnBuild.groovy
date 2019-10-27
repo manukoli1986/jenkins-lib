@@ -1,4 +1,5 @@
-def mvn {
+#!/usr/bin/env groovy
+def build {
 //      withMaven(maven: 'maven') {
 //      mvn clean verify -DSkiptest=True
 //      }
