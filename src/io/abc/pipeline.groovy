@@ -6,5 +6,8 @@ def clone() {
 }
 
 def build() {
-  mvn clean deploy -U
+      withMaven(maven: 'maven') {
+          sh "mvn clean verify -DSkiptest=True"
+      }
+//  mvn clean deploy -U
 }
