@@ -4,5 +4,5 @@ def call() {
 //      withMaven(maven: 'maven') {
 //      sh 'mvn clean verify -DSkiptest=True'
 //      }
-      mvn clean verify -DSkiptest=True
+      sh 'mvn clean verify -DSkiptest=True'
 }
