@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def call() {
+def call(mvn) {
 //      withMaven(maven: 'maven') {
 //      sh 'mvn clean verify -DSkiptest=True'
 //      }
