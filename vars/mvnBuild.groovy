@@ -1,5 +1,10 @@
 #!/usr/bin/env groovy
 
+tools {
+  maven 'maven'
+  jdk 'jdk'
+}
+
 def mvn {
       sh 'mvn clean verify -DSkiptest=True -U -X'
       }
