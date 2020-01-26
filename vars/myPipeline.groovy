@@ -5,12 +5,12 @@ pipeline {
         maven 'maven'
         jdk 'jdk'
     }
-	options {
-		timeout(time:5, unit: 'MINUTES')
-		buildDiscarder(logRotator(numToKeepStr: '10'))
-		timestamps()
-		ansiColor("xterm")
-	}
+//	options {
+//		timeout(time:5, unit: 'MINUTES')
+//		buildDiscarder(logRotator(numToKeepStr: '10'))
+//		timestamps()
+//		ansiColor("xterm")
+//	}
     stages {
         stage ('Clone') {
           steps {
