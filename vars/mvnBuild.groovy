@@ -6,7 +6,7 @@ tools {
 }
 
 def call(verify) {
-      sh 'mvn clean verify -U -X'
+      sh 'mvn clean package -U -X'
       }
 //def call(mvn) {
 //      withMaven(maven: 'maven') {
