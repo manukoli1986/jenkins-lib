@@ -5,7 +5,7 @@ tools {
   jdk 'jdk'
 }
 
-def call(verify) {
+def call(package) {
       sh 'mvn clean package -U -X'
       }
 //def call(mvn) {
