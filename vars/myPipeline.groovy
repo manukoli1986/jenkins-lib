@@ -28,7 +28,7 @@ pipeline {
             }
           }
             steps {
-                sh 'mvn -Dmaven.test.failure.ignore=true install' 
+                sh 'mvn -Dmaven.test.failure.ignore=true install -X -U' 
             }
             post {
                 success {
@@ -39,10 +39,15 @@ pipeline {
         stage ('test') {
             steps {
                 parallel (
-                    "unit tests": { sh 'mvn test' },
-                    "integration tests": { sh 'mvn integration-test' }
+                    "unit tests": { sh 'mvn test -X' },
+                    "integration tests": { sh 'mvn integration-test -X' }
                 )
             }
+	    post {
+            	failure {
+                	mail to: pipelineParams.email, subject: 'Pipeline failed', body: "${env.BUILD_URL}"
+            }
+        }
         }
         
 	}
