@@ -28,7 +28,7 @@ pipeline {
             }
           }
             steps {
-                sh 'mvn -Dmaven.test.failure.ignore=true install -X -U' 
+                sh 'mvn clean package -X -U' 
             }
             post {
                 success {
