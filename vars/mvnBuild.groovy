@@ -5,11 +5,11 @@ tools {
   jdk 'jdk'
 }
 
-def verify {
+def call(verify) {
       sh 'mvn clean verify -U -X'
       }
 
-def test {
+def call(test) {
       sh 'mvn test -U -X'
       }
 
