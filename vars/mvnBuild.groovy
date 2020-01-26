@@ -5,10 +5,6 @@ tools {
   jdk 'jdk'
 }
 
-def package(args) {
+def mvn(args) {
   sh 'mvn clean package ${args}'
-      }
-
-def test(args) {
-  sh 'mvn test ${args}'
       }
