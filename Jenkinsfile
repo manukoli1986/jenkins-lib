@@ -1,0 +1,8 @@
+#### Just rename the file to Jenkinsfile. ####
+
+#!/usr/bin/env groovy
+@Library('jenkins-lib@master')_
+import io.abc.*
+import jenkins.model.*
+
+myPipeline(branch: 'master', gitUrl: 'https://github.com/manukoli1986/simple-java-maven-app.git', email: 'manukoli1986@gmail.com')
